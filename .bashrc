@@ -5,6 +5,9 @@
 #Add shell scripts to PATH env variable.
 export PATH=$PATH:/home/chinmay/programming/Shell_Scripts
 
+#Adding path for Scala.
+export PATH="/usr/local/scala/bin":$PATH
+
 #Set the JAVA_HOME environment variable and add it to PATH.
 export JAVA_HOME=/usr/lib/jvm/jdk1.7.0_75/
 export PATH=$PATH:$JAVA_HOME
