@@ -10,10 +10,10 @@ export PATH=$PATH:$HOME/programming/Shell_Scripts
 
 #Set the home directory for Scala and add it to PATH.
 export SCALA_HOME=/usr/local/scala/bin
-export PATH=$PATH$:SCALA_HOME
+export PATH=$PATH:$SCALA_HOME
 
-#Set the JAVA_HOME environment variable and add it to PATH.
-export JAVA_HOME=/usr/bin
+#Set the JAVA_HOME environment variable and add it to PATH if not already there.
+export JAVA_HOME=$(/usr/libexec/java_home)
 export PATH=$PATH:$JAVA_HOME
 
 #Set the home directory for weka and add it to PATH.
@@ -57,8 +57,8 @@ alias gitcache='sudo git config --global credential.helper "cache --timeout=7200
 #Start Cassandra cqlsh.
 #alias cqlsh='$HOME/opt/cassandra/bin/cqlsh'
 
-#Display ls output colourized.
-alias ls='ls --color=auto'
+#Make ls use colors
+export CLICOLOR=1
 
 #Display grep output colourized.
 alias grep='grep --color=auto'
@@ -88,7 +88,7 @@ alias changed_files='svn diff | grep Index:'
 alias fns_alias='grep --color=always -n "()" "$HOME"/.bashrc | grep -v "fns_alias"'
 
 #Directly cd to shell scripts directory.
-alias progsh='cd $HOME/Shell_Scripts'
+alias progsh='cd $HOME/programming/Shell_Scripts'
 
 #Directly cd to the scratch directory (for testing out programs).
 alias scratch='cd $HOME/scratch'
@@ -100,7 +100,7 @@ alias trash_dir='cd $HOME/rm_trash'
 alias dm='cd $HOME/UIUC/Coursework/Sem_2/CS_512_Data_Mining_Principles/'
 
 #Directly cd into the directory for Data Mining CS412.
-alias ds='cd $HOME/UIUC/Coursework/Sem_2/CS_525_Advanced_Distributed_Systems/'
+alias ads='cd $HOME/UIUC/Coursework/Sem_2/CS_525_Advanced_Distributed_Systems/'
 
 #Directly cd into the svn directory for CS 241.
 alias cs241='cd $HOME/UIUC/TA/CS_241_System_Programming/_class'
