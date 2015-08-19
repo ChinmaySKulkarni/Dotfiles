@@ -1,7 +1,5 @@
 # Bashrc-Vimrc-Backups
 Backup of my .bashrc and .vimrc files along with a list of required plug-ins.
-Latest version as of:
-May 22, 2015.
 
 Using Pathogen \m/
 
