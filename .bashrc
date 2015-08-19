@@ -2,15 +2,25 @@
 #Environment Variables:
 #########################################################################################################################################################################
 
-#Add shell scripts to PATH env variable.
-export PATH=$PATH:/home/chinmay/programming/Shell_Scripts
+#Define my HOME directory.
+export HOME=/Users/chinmay
 
-#Adding path for Scala.
-export PATH="/usr/local/scala/bin":$PATH
+#Add shell scripts to PATH env variable.
+export PATH=$PATH:$HOME/programming/Shell_Scripts
+
+#Set the home directory for Scala.
+export SCALA_HOME=/usr/local/scala/bin
+
+#Add the path for SCALA_HOME.
+export PATH=$SCALA_HOME:$PATH
 
 #Set the JAVA_HOME environment variable and add it to PATH.
-export JAVA_HOME=/usr/lib/jvm/jdk1.7.0_75/
+export JAVA_HOME=/usr/bin
 export PATH=$PATH:$JAVA_HOME
+
+#Set the home directory for weka and add it to PATH.
+export WEKA_HOME=/usr/local/weka
+export PATH=$PATH:$WEKA_HOME
 
 #Set the default editor.
 export EDITOR=vim
@@ -19,18 +29,18 @@ export EDITOR=vim
 export TERM="xterm-256color"
 
 #Set Hadoop variables and add them to PATH.
-export HADOOP_HOME=/usr/local/hadoop
-export PATH=$PATH:$HADOOP_HOME/bin
-export PATH=$PATH:$HADOOP_HOME/sbin
-export HADOOP_MAPRED_HOME=$HADOOP_HOME
-export HADOOP_COMMON_HOME=$HADOOP_HOME
-export HADOOP_HDFS_HOME=$HADOOP_HOME
-export YARN_HOME=$HADOOP_HOME
+# export HADOOP_HOME=/usr/local/hadoop
+# export PATH=$PATH:$HADOOP_HOME/bin
+# export PATH=$PATH:$HADOOP_HOME/sbin
+# export HADOOP_MAPRED_HOME=$HADOOP_HOME
+# export HADOOP_COMMON_HOME=$HADOOP_HOME
+# export HADOOP_HDFS_HOME=$HADOOP_HOME
+# export YARN_HOME=$HADOOP_HOME
 
 #Set Cassandra variables and add them to PATH.
-export CASSANDRA_HOME=/home/chinmay/opt/cassandra
-export CASSANDRA_CONF=$CASSANDRA_HOME/conf
-export PATH=$PATH:$CASSANDRA_HOME/bin
+#export CASSANDRA_HOME=$HOME/opt/cassandra
+#export CASSANDRA_CONF=$CASSANDRA_HOME/conf
+#export PATH=$PATH:$CASSANDRA_HOME/bin
 
 #########################################################################################################################################################################
 #Fancy Prompt:
@@ -47,7 +57,7 @@ PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[0
 alias gitcache='sudo git config --global credential.helper "cache --timeout=7200"'
 
 #Start Cassandra cqlsh.
-alias cqlsh='/home/chinmay/opt/cassandra/bin/cqlsh'
+#alias cqlsh='$HOME/opt/cassandra/bin/cqlsh'
 
 #Display ls output colourized.
 alias ls='ls --color=auto'
