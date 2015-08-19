@@ -140,14 +140,7 @@ syntax enable
 "Prevent annoying preview from coming up everytime you use autocomplete.
 set completeopt-=preview
 
-"YouCompleteMe related configurations.
-let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
-"To prevent YouCompleteMe from conflicting with UtilSnips tab key usage.
-"let g:ycm_key_list_select_completion=[]
-"let g:ycm_key_list_previous_completion=[]
-
-"Syntastic Configurations for syntax checking in code. (Syntastic for C/C++ comes
-"includes in YouCompleteMe and it uses the Clang compiler).
+"Syntastic Configurations for syntax checking in code.
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
