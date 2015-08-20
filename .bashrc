@@ -185,7 +185,7 @@ fnr()
     echo "Usage: fnr <Word to replace> <New word> <Directory/File Names(Optional)>"
   elif [ "$#" -eq 2 ]
   then
-    grep -lr --exclude-dir=".svn" -e "$1" . | xargs sed -i "s/"$1"/"$2"/g"
+    grep -lr --exclude-dir=".svn" -e "$1" . | xargs sed -i ".bak" "s/"$1"/"$2"/g"
   else
     FIRST_WORD="$1"
     SECOND_WORD="$2"
@@ -195,10 +195,10 @@ fnr()
     do
       if [[ -d "$filename" ]]
       then
-        grep -lr --exclude-dir=".svn" -e "$FIRST_WORD" "$filename" | xargs sed -i "s/"$FIRST_WORD"/"$SECOND_WORD"/g"
+        grep -lr --exclude-dir=".svn" -e "$FIRST_WORD" "$filename" | xargs sed -i ".bak" "s/"$FIRST_WORD"/"$SECOND_WORD"/g"
       elif [[ -f "$filename" ]]
       then
-        sed -i "s/"$FIRST_WORD"/"$SECOND_WORD"/g" "$filename"
+        sed -i ".bak" "s/"$FIRST_WORD"/"$SECOND_WORD"/g" "$filename"
       fi
     done
   fi
