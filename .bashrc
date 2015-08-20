@@ -220,7 +220,7 @@ mem_compile()
 
 #Print the sorted disk usage of each file. Display along with the total (-c), print du in 
 #human readable format (-h), summarize (display only total for each argument) (-s), 
-#sort as human-numeric-sort (sort -h).
+#sort as human-numeric-sort (gsort -h).
 #If no directory is specified, run in the current directory.
 #If a directory is specified, run in that directory.
 #If a filename is specified, find the disk usage for that file only.
@@ -228,13 +228,13 @@ sdu()
 {
   if [ "$#" -eq 0 ]
   then
-    du -chs * | sort -h
+    du -chs * | gsort -h
   else
     for argument in "$@"
     do
       if [[ -d "$argument" ]] 
       then
-        du -chs "$argument"/* | sort -h
+        du -chs "$argument"/* | gsort -h
       elif [[ -f "$argument" ]] 
       then
         du -chs "$argument" 
