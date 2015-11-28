@@ -66,7 +66,7 @@ alias grep='grep --color=auto'
 #For typing less to display ls.
 alias l='ls'
 
-#Show all files (do not ignore files starting with .) (-a), display inode numbers (first column) (-i), 
+#Show all files (do not ignore files starting with .) (-a), display inode numbers (first column) (-i),
 #ls with long listing format(-l), reverse order while sorting (-r), sort by modification time (newest first) (-t).
 alias lt='ls -ailrt'
 
@@ -124,14 +124,14 @@ alias refresh='source ~/.bashrc'
 #If no directory/file is passed, it searches the pattern in the current directory.
 #If a directory name is passed, it searches the pattern in that directory.
 #If a file name is passed, it searches the pattern in that file.
-fine_grep()	
+fine_grep()
 {
   if [ "$#" -lt 1 ] || [ "$#" -gt 2 ]
   then
     echo "Usage: fine_grep <Pattern to find> <Directory/File Name(Optional)>"
-  elif [ "$#" -eq 2 ] 					
+  elif [ "$#" -eq 2 ]
   then
-    if [[ -d "$2" ]] 
+    if [[ -d "$2" ]]
     then
       grep --color=auto -nr "$1" --exclude=*.{tmp,svn*,*~,o,linux*,swp*} "$2"/*
     elif [[ -f "$2" ]]
@@ -144,17 +144,17 @@ fine_grep()
 }
 
 #Ignore case (-i) for fine_grep.
-ignore_case_fine_grep()		
+ignore_case_fine_grep()
 {
   if [ "$#" -lt 1 ] || [ "$#" -gt 2 ]
   then
     echo "Usage: ignore_case_fine_grep <Pattern to find> <Directory/File Name(Optional)>"
   elif [ "$#" -eq 2 ]
   then
-    if [[ -d "$2" ]] 
+    if [[ -d "$2" ]]
     then
       grep --color=auto -inr "$1" --exclude=*.{tmp,svn*,*~,o,linux*} "$2"/*
-    elif [[ -f "$2" ]] 
+    elif [[ -f "$2" ]]
     then
       grep --color=auto -in "$1" "$2"
     fi
@@ -173,9 +173,9 @@ ignore_case_fine_grep()
 #	prog | xargs utility
 #
 #where prog is expected to output one or more newline/space separated results. The trick is that xargs does not! necessarily
-#call utility once for each result, instead it splits the result list into sublists and calls utility for every sublist. 
+#call utility once for each result, instead it splits the result list into sublists and calls utility for every sublist.
 #If you want to force xargs to call utility for every single result you will need to invoke it with xargs -L1.
-#By default, xargs invokes the /bin/echo utility for each sublist. 
+#By default, xargs invokes the /bin/echo utility for each sublist.
 #In this case xargs calls sed with (-i) (to edit files in-place) and perform the substitution.
 #If file names are specified, the sed command is run over those filenames only.
 fnr()
@@ -218,8 +218,8 @@ mem_compile()
   fi
 }
 
-#Print the sorted disk usage of each file. Display along with the total (-c), print du in 
-#human readable format (-h), summarize (display only total for each argument) (-s), 
+#Print the sorted disk usage of each file. Display along with the total (-c), print du in
+#human readable format (-h), summarize (display only total for each argument) (-s),
 #sort as human-numeric-sort (gsort -h).
 #If no directory is specified, run in the current directory.
 #If a directory is specified, run in that directory.
@@ -232,13 +232,13 @@ sdu()
   else
     for argument in "$@"
     do
-      if [[ -d "$argument" ]] 
+      if [[ -d "$argument" ]]
       then
         du -chs "$argument"/* | gsort -h
-      elif [[ -f "$argument" ]] 
+      elif [[ -f "$argument" ]]
       then
-        du -chs "$argument" 
-      elif [[ ! -e "$argument" ]] 
+        du -chs "$argument"
+      elif [[ ! -e "$argument" ]]
       then
         echo "No such file or directory!"
       fi
@@ -254,7 +254,7 @@ inode_find()
   then
     echo "Enter inode number for the file to be found"
     return 1
-  fi 
+  fi
   echo "$1"
-  find / -inum "$1" -print 
+  find / -inum "$1" -print
 }

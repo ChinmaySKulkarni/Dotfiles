@@ -28,6 +28,11 @@ let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=4
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=6
 
+"Indentation Guide like sublime. NOTE that there is a space after the last '\'
+"below.
+:set listchars=tab:\|\ 
+:set list
+
 "Set the number of spaces to be inserted when tab is pressed.
 set tabstop=4
 
@@ -141,16 +146,16 @@ syntax enable
 set completeopt-=preview
 
 "Syntastic Configurations for syntax checking in code.
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_python_python_use_codec = 1
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+"let g:syntastic_python_python_use_codec = 1
 "Enable balloon error messages.
-let g:syntastic_enable_balloons = 1
+"let g:syntastic_enable_balloons = 1
 
 
 """	Misc.
