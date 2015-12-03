@@ -167,6 +167,9 @@ set showmatch
 "Use all enhancements and improvements of vim.
 set nocompatible
 
+"Paste text into vim without auto-indent.
+set pastetoggle=<F10>
+
 "Invoke Pathogen infect()
 execute pathogen#infect()
 
