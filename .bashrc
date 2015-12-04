@@ -26,6 +26,9 @@ export EDITOR=vim
 #Set the terminal color environment variable.
 export TERM="xterm-256color"
 
+#Set this as the Python Path for the CS 598 HS project code to work.
+export PYTHONPATH=$PYTHONPATH:/Users/chinmay/UIUC/Coursework/Sem_3/CS_598_Social_And_Information_Networks/Project/cs598hs
+
 #Set Hadoop variables and add them to PATH.
 # export HADOOP_HOME=/usr/local/hadoop
 # export PATH=$PATH:$HADOOP_HOME/bin
@@ -116,6 +119,9 @@ alias show_hidden='defaults write com.apple.finder AppleShowAllFiles '
 
 #Source .bashrc so that changes take effect right away.
 alias refresh='source ~/.bashrc'
+
+#Find all files recursively within the current directory that have .h, .c, .cpp or .py extensions.
+alias listfiles='find -L . -type f -name "*.h" -o -name "*.c" -o -name "*.cpp" -o -name "*.py"'
 #########################################################################################################################################################################
 #Useful Bash Functions:
 #########################################################################################################################################################################
