@@ -71,7 +71,8 @@ alias l='ls'
 
 #Show all files (do not ignore files starting with .) (-a), display inode numbers (first column) (-i),
 #ls with long listing format(-l), reverse order while sorting (-r), sort by modification time (newest first) (-t).
-alias lt='ls -ailrt'
+#alias lt='ls -ailrt'
+alias lt='ls -ail'
 
 #lt with file sizes in human readable format (-h).
 alias lth='ls -ahilrt'
