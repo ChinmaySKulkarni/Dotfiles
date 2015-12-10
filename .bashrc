@@ -125,7 +125,7 @@ alias show_hidden='defaults write com.apple.finder AppleShowAllFiles '
 alias refresh='source ~/.bashrc'
 
 #Find all files recursively within the current directory that have .h, .c, .cpp or .py extensions.
-alias listfiles='find -L . -type f -name "*.h" -o -name "*.c" -o -name "*.cpp" -o -name "*.py"'
+alias list_code_files='find -L . -type f -name "*.h" -o -name "*.c" -o -name "*.cpp" -o -name "*.py"'
 #########################################################################################################################################################################
 #Useful Bash Functions:
 #########################################################################################################################################################################
