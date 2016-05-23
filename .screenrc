@@ -1,0 +1,8 @@
+startup_message off
+vbell off
+
+hardstatus alwayslastline "%{wk}%-w%{Gk}[%n %t]%{wk}%+w%=%{Ck}%M%d %c%{-} %{=r} ${USER}@%H"
+
+shell bash
+
+autodetach on

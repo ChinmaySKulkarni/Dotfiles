@@ -1,5 +1,5 @@
 # Bashrc-Vimrc-Backups
-Backup of my .bashrc and .vimrc files along with a list of required plug-ins.
+Backup of my dotfiles: .bashrc, .screenrc and .vimrc files along with a list of required plug-ins.
 
 Using Pathogen \m/
 
