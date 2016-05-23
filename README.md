@@ -1,4 +1,5 @@
-# Backup of my dotfiles: .bashrc, .screenrc and .vimrc files along with a list of required plug-ins.
+# Dotfiles
+Backup of my dotfiles: .bashrc, .screenrc and .vimrc files along with a list of required plug-ins.
 
 Using Pathogen \m/
 
