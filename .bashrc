@@ -32,6 +32,10 @@ export PYTHONPATH=$PYTHONPATH:/Users/chinmay/UIUC/Coursework/Sem_3/CS_598_Social
 #Set up the home directory for OrientDB
 export ORIENT_HOME=/Users/chinmay/UIUC/Thesis_Work/Project/orientdb-community-2.1.6
 
+#Add the location of RabbitMQ in PATH.
+export RABBITMQ_PATH=/usr/local/sbin
+export PATH=$PATH:$RABBITMQ_PATH
+
 #Set Hadoop variables and add them to PATH.
 # export HADOOP_HOME=/usr/local/hadoop
 # export PATH=$PATH:$HADOOP_HOME/bin
@@ -126,6 +130,11 @@ alias refresh='source ~/.bashrc'
 
 #Find all files recursively within the current directory that have .h, .c, .cpp or .py extensions.
 alias list_code_files='find -L . -type f -name "*.h" -o -name "*.c" -o -name "*.cpp" -o -name "*.py"'
+
+#Run MongoDB from the specified data directory.
+alias mongodb_start='sudo mongod --dbpath /MongoDB/db/'
+
+
 #########################################################################################################################################################################
 #Useful Bash Functions:
 #########################################################################################################################################################################

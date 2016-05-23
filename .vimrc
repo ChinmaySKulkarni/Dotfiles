@@ -74,8 +74,8 @@ set cursorline
 "Allow backspace to delete previous characters.
 set backspace=2
 
-"Remove the color for the column line outlining margin in *py files.
-set colorcolumn=0
+"Show the line marking at 100 characters.
+set colorcolumn=100
 
 
 """	Command information/file information/Status bar configurations
