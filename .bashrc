@@ -134,7 +134,8 @@ alias list_code_files='find -L . -type f -name "*.h" -o -name "*.c" -o -name "*.
 #Run MongoDB from the specified data directory.
 alias mongodb_start='sudo mongod --dbpath /MongoDB/db/'
 
-
+# Auto-correct commands.
+eval "$(thefuck --alias)"
 #########################################################################################################################################################################
 #Useful Bash Functions:
 #########################################################################################################################################################################
