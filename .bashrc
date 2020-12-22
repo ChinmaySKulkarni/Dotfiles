@@ -26,6 +26,9 @@ export EDITOR=vim
 #Set the terminal color environment variable.
 export TERM="xterm-256color"
 
+#Ignore certain files like object/class files when auto-completing
+export FIGNORE=$FIGNORE:.pyc:.o:.class
+
 #Set this as the Python Path for the CS 598 HS project code to work.
 export PYTHONPATH=$PYTHONPATH:/Users/chinmay/UIUC/Coursework/Sem_3/CS_598_Social_And_Information_Networks/Project/cs598hs
 
@@ -278,3 +281,12 @@ inode_find()
   echo "$1"
   find / -inum "$1" -print
 }
+
+parse_git_branch() {
+	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
+
+if [ -f ~/.git-completion.bash ]; then
+	  . ~/.git-completion.bash
+  fi
