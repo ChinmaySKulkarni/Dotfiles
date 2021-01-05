@@ -6,7 +6,7 @@
 export HOME=/Users/chinmay
 
 #Add shell scripts to PATH env variable.
-export PATH=$PATH:$HOME/programming/Shell_Scripts
+export PATH=$PATH:$HOME/programming/shell-scripts
 
 #Set the home directory for Scala and add it to PATH.
 export SCALA_HOME=/usr/local/scala/bin
@@ -102,7 +102,7 @@ alias changed_files='svn diff | grep Index:'
 alias fns_alias='grep --color=always -n "()" "$HOME"/.bashrc | grep -v "fns_alias"'
 
 #Directly cd to shell scripts directory.
-alias progsh='cd $HOME/programming/Shell_Scripts'
+alias progsh='cd $HOME/programming/shell-scripts'
 
 #Directly cd to the scratch directory (for testing out programs).
 alias scratch='cd $HOME/scratch'
@@ -234,7 +234,7 @@ mem_compile()
   then
     echo "Usage: mem_compile <C file>  <Name of executable to be generated>"
   else
-		MEM_WATCH_DIR="$HOME/programming/C/mem_watch"
+		MEM_WATCH_DIR="$HOME/programming/c/mem_watch"
 		cp "$MEM_WATCH_DIR"/"memwatch.c" ./
 		cp "$MEM_WATCH_DIR"/"memwatch.h" ./
     gcc -DMEMWATCH -DMEMWATCH_STDIO "$1" memwatch.c -o "$2"
