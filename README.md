@@ -1,5 +1,6 @@
-# Dotfiles
+# Dotfiles and Other Configurations
 Backup of my dotfiles: .bashrc, .screenrc and .vimrc files along with a list of required plug-ins.
+Also includes iTerm2 preference JSON
 
 Using Pathogen.
 

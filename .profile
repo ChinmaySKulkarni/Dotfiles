@@ -5,6 +5,19 @@
 #Define my HOME directory.
 export HOME=/Users/chinmay
 
+#Set the JAVA_HOME environment variable and add it to PATH if not already there.
+export JAVA_HOME=$(/usr/libexec/java_home)
+export PATH=$PATH:$JAVA_HOME
+#Switch between different Java versions if required
+alias j8="export JAVA_HOME=\"/usr/libexec/java_home -v 1.8\"; java -version"
+
+#Add poetry to PATH
+export PATH="$HOME/.poetry/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
+
+#Add virtualenv to PATH
+export PATH="$PATH:/Users/chinmay/Library/Python/3.8/bin/"
+
 #Set the default editor.
 export EDITOR=vim
 
@@ -73,4 +86,8 @@ export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 if [ -f ~/.git-completion.bash ]; then
 	  . ~/.git-completion.bash
   fi
+
+#Pyenv and Pyenv-virtualenv sourcing
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
