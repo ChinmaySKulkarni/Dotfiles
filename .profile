@@ -74,7 +74,7 @@ alias show_hidden='defaults write com.apple.finder AppleShowAllFiles '
 #Find all files recursively within the current directory that have .h, .c, .cpp or .py extensions.
 alias list_code_files='find -L . -type f -name "*.h" -o -name "*.c" -o -name "*.cpp" -o -name "*.py"'
 
-#Fix gpg by force killing gpg-agent (useful for errors realted gpg signing failed)
+#Fix gpg by force killing gpg-agent (useful for errors related to gpg signing failed)
 alias fix_gpg='killall gpg-agent && gpg-agent --daemon --use-standard-socket --pinentry-program /usr/local/bin/pinentry'
 
 #########################################################################################################################################################################
