@@ -23,6 +23,12 @@ export PATH=$PATH:$WEKA_HOME
 #Add python binaries to PATH
 export PATH=$PATH:/usr/local/bin/python3
 
+#Add local bin to path
+export PATH=$PATH:$HOME/.local/bin
+
+#Add miniconda3 to path
+export PATH=$PATH:$HOME/miniconda3/bin
+
 #Set the default editor.
 export EDITOR=vim
 
@@ -149,6 +155,9 @@ alias dockrmall_containers='docker rm -f $(docker ps -a -q)'
 alias python='python3'
 alias python2='/usr/bin/python'
 alias pip='pip3'
+
+# ssh Azure config. Needs azure.local entry in ~/.ssh/config file
+alias ssh-azure-local="ssh azure.local -p 2222 -t 'tmux -CC new-session -A -s 0'"
 #########################################################################################################################################################################
 #Useful Bash Functions:
 #########################################################################################################################################################################
