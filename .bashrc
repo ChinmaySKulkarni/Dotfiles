@@ -13,12 +13,15 @@ export SCALA_HOME=/usr/local/scala/bin
 export PATH=$PATH:$SCALA_HOME
 
 #Set the JAVA_HOME environment variable and add it to PATH if not already there.
-export JAVA_HOME=$(/usr/libexec/java_home)
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 export PATH=$PATH:$JAVA_HOME
 
 #Set the home directory for weka and add it to PATH.
 export WEKA_HOME=/usr/local/weka
 export PATH=$PATH:$WEKA_HOME
+
+#Add python binaries to PATH
+export PATH=$PATH:/usr/local/bin/python3
 
 #Set the default editor.
 export EDITOR=vim
@@ -28,9 +31,6 @@ export TERM="xterm-256color"
 
 #Ignore certain files like object/class files when auto-completing
 export FIGNORE=$FIGNORE:.pyc:.o:.class
-
-#Set this as the Python Path for the CS 598 HS project code to work.
-export PYTHONPATH=$PYTHONPATH:/Users/chinmay/UIUC/Coursework/Sem_3/CS_598_Social_And_Information_Networks/Project/cs598hs
 
 #Set up the home directory for OrientDB
 export ORIENT_HOME=/Users/chinmay/UIUC/Thesis_Work/Project/orientdb-community-2.1.6
@@ -91,7 +91,7 @@ alias lth='ls -ahilrt'
 alias vi='vim'
 
 #Aliasing rm to safe_rm shell script to avoid disastrous removals.
-alias rm='safe_rm'
+#alias rm='safe_rm'
 
 #Find the changed files when using svn
 alias changed_files='svn diff | grep Index:'
@@ -139,6 +139,16 @@ alias mongodb_start='sudo mongod --dbpath /MongoDB/db/'
 
 # Auto-correct commands.
 eval "$(thefuck --alias)"
+
+#Useful Docker aliases
+alias dockia='docker images -a'
+alias dockpsa='docker ps -a'
+alias dockrmall_containers='docker rm -f $(docker ps -a -q)'
+
+# Use python3 by default
+alias python='python3'
+alias python2='/usr/bin/python'
+alias pip='pip3'
 #########################################################################################################################################################################
 #Useful Bash Functions:
 #########################################################################################################################################################################
