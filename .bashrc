@@ -29,6 +29,9 @@ export PATH=$PATH:$HOME/.local/bin
 #Add miniconda3 to path
 export PATH=$PATH:$HOME/miniconda3/bin
 
+#Open visual studio code from command line
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
 #Set the default editor.
 export EDITOR=vim
 
@@ -158,6 +161,7 @@ alias pip='pip3'
 
 # ssh Azure config. Needs azure.local entry in ~/.ssh/config file
 alias ssh-azure-local="ssh azure.local -p 2222 -t 'tmux -CC new-session -A -s 0'"
+
 #########################################################################################################################################################################
 #Useful Bash Functions:
 #########################################################################################################################################################################
