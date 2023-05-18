@@ -160,7 +160,7 @@ alias python2='/usr/bin/python'
 alias pip='pip3'
 
 # ssh Azure config. Needs azure.local entry in ~/.ssh/config file
-alias ssh-azure-local="ssh azure.local -p 2222 -t 'tmux -CC new-session -A -s 0'"
+alias ssh-azure-local="ssh azure.local -p 2222 -t 'tmux new-session -A -s main'"
 
 # Get details of all jobs located in the Slurm scheduling queue with more details
 alias squeuen='squeue --format="%.18i %.9P %.80j %.8u %.8T %.10M %.9l %.6D %R" '
