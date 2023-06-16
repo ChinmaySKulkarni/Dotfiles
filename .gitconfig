@@ -8,3 +8,7 @@
 	gpgsign = true
 [gpg]
 	program = /usr/local/bin/gpg
+[color]
+	ui = auto
+[core]
+	editor = vim
