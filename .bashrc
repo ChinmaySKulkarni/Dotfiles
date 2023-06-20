@@ -77,6 +77,9 @@ PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[0
 #Store git credentials to save time. Timeout set to 2 Hours.
 alias gitcache='sudo git config --global credential.helper "cache --timeout=7200"'
 
+#Easier navigation of git history
+alias lg="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
 #Start Cassandra cqlsh.
 #alias cqlsh='$HOME/opt/cassandra/bin/cqlsh'
 
