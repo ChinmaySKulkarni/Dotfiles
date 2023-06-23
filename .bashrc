@@ -319,4 +319,22 @@ export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 
 if [ -f ~/.git-completion.bash ]; then
 	  . ~/.git-completion.bash
-  fi
+fi
+
+fixssh() {
+  for key in SSH_AUTH_SOCK SSH_CONNECTION SSH_CLIENT; do
+    if (tmux show-environment | grep "^${key}" > /dev/null); then
+      value=`tmux show-environment | grep "^${key}" | sed -e "s/^[A-Z_]*=//"`
+      export ${key}="${value}"
+    fi
+  done
+}
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Case-insensitive globbing (used in pathname expansion)
+shopt -s nocaseglob;
+# Append to the Bash history file, rather than overwriting it
+shopt -s histappend;
+# Autocorrect typos in path names when using `cd`
+shopt -s cdspell;
