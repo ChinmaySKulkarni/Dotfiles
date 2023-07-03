@@ -158,6 +158,13 @@ alias dockia='docker images -a'
 alias dockpsa='docker ps -a'
 alias dockrmall_containers='docker rm -f $(docker ps -a -q)'
 
+#Useful k8s aliases
+alias kcgn='kubectl get namespaces'
+alias kcgp='kubectl get pods'
+alias kcgd='kubectl get deployments'
+alias kcgs='kubectl get services'
+alias kcgi='kubectl get ingresses'
+
 # Use python3 by default
 alias python='python3'
 alias python2='/usr/bin/python'
