@@ -164,7 +164,7 @@ alias kcgp='kubectl get pods'
 alias kcgd='kubectl get deployments'
 alias kcgs='kubectl get services'
 alias kcgi='kubectl get ingresses'
-alias kcl='kubectl get logs'
+alias kcl='kubectl logs'
 
 # Use python3 by default
 alias python='python3'
