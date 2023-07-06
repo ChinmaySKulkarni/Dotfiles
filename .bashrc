@@ -80,6 +80,9 @@ alias gitcache='sudo git config --global credential.helper "cache --timeout=7200
 #Easier navigation of git history
 alias lg="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
+#Save time when pulling from main
+alias gpom='git pull origin main'
+
 #Start Cassandra cqlsh.
 #alias cqlsh='$HOME/opt/cassandra/bin/cqlsh'
 
