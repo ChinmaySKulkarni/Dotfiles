@@ -2,7 +2,7 @@
 	helper = cache --timeout=7200
 [user]
 	name = Chinmay Kulkarni
-	email = chinmayskulkarni@gmail.com
+	email = <chinmayskulkarni@gmail.com or work email>
 	signingkey = <replace with GPG key>
 [commit]
 	gpgsign = true
