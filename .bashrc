@@ -87,6 +87,7 @@ alias gd='git diff'
 alias ga='git add .'
 alias gc='git commit -S -m'
 alias gl='git log'
+alias gcm='git checkout main'
 
 #Start Cassandra cqlsh.
 #alias cqlsh='$HOME/opt/cassandra/bin/cqlsh'
