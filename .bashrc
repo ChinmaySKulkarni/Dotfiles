@@ -355,3 +355,8 @@ shopt -s nocaseglob;
 shopt -s histappend;
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
+
+# See fzf https://github.com/junegunn/fzf#installation
+# Installation: brew install fzf
+# Key bindings: $(brew --prefix)/opt/fzf/install
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
