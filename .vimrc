@@ -259,3 +259,7 @@ augroup Python
 	autocmd!
 	autocmd Filetype python setlocal tabstop=4
 augroup END
+
+" To use fzf in vim
+set rtp+=/opt/homebrew/opt/fzf
+
