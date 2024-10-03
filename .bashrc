@@ -103,6 +103,7 @@ alias kcgs='kubectl get services'
 alias kcgi='kubectl get ingresses'
 alias kcl='kubectl logs'
 alias k='kubectl'
+alias kx='kubectx'
 
 # use python3 by default
 alias python='python3'
