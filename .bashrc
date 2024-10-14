@@ -24,10 +24,12 @@ export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
 export LDFLAGS="-L/opt/homebrew/opt/postgresql@15/lib"
 export CPPFLAGS="$CPPFLAGS:-I/opt/homebrew/opt/postgresql@15/include"
 
-# set the default editor.
-export EDITOR=vim
+# set the default editor to neovim. Using https://nvchad.com/docs/quickstart/install/
+# space + e to open file tree view inside directories. nvim directory to be placed at 
+# ~/.config/. for macs
+export EDITOR=nvim
 # used for k9s
-export KUBE_EDITOR="vim"
+export KUBE_EDITOR="nvim"
 
 # set the terminal color environment variable.
 export TERM="xterm-256color"
@@ -67,13 +69,18 @@ alias lg="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%
 # display grep output colorized.
 alias grep='grep --color=auto'
 
+# Actually just use ripgrep instead of grep
+# See https://www.linode.com/docs/guides/ripgrep-linux-installation/#install-ripgrep-using-homebrew
+alias grep='rg'
+
 alias l='ls'
 alias lt='ls -ail'
 # lt with file sizes in human readable format (-h).
 alias lth='ls -ahilrt'
 
-#Default to vim even when vi is entered.
-alias vi='vim'
+#Default to neovim even when vi is entered.
+alias vi='nvim'
+alias vim='nvim'
 
 # similar to the 'alias' command, except it displays the bash functions defined inside .bashrc.
 alias fns_alias='grep --color=always -n "()" "$HOME"/.bashrc | grep -v "fns_alias"'
